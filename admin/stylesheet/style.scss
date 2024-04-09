@@ -15,6 +15,11 @@
         display: flex;
         align-items: center;
         color: #fff;
+        z-index: 111;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        background: linear-gradient(to right, #FF902F 0%, #fc6075 100%);
 
         .logo{
             position: relative;
@@ -83,7 +88,8 @@
 }
 .side-bar-Container {
     position: fixed;
-    width: 267px;
+    top: 60px;
+    width: 250px;
     height: 100%;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
     background-color: #212529;
@@ -136,6 +142,7 @@
                 height: 20px;
                 opacity: 0;
                 width: 100%;
+                z-index: 22;
             }
             
             .flex{
@@ -201,7 +208,7 @@
                     // padding: 6px 0px;
                     left: 0px;
                     margin-bottom: 20px;
-                    width: 220px;
+                    width: 200px;
                     top: 10px;
                     height: auto;
                     opacity: 1;
@@ -211,7 +218,7 @@
             &.first:has(input[type="checkbox"]:checked){
                 & .dropdown-content li{
                     display: block;
-                    width: 220px;
+                    width: 200px;
                 }
             }
             &.first:has(input[type="checkbox"]:checked){
@@ -256,8 +263,8 @@
 }
 
 .side-bar-Container.active{
-    width: 70px;
-    transition: .5s ease;
+    width: 88px;
+    transition: width .5s ease;
 
     .submenu p{
         opacity: 0;
@@ -274,6 +281,725 @@
     transform: rotate(45deg);
 }
 
+// =======  main ======= 
+
+.main{
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+    background-color: #f7f7f7;
+    transition: width .5s easy;
+    z-index: 11;
+    padding: 24px;
+
+    // ======== dashboard cards =========
+
+    .dashboard-cards{
+        display: flex;
+        position: relative;
+        gap: 32px;
+        margin-bottom: 24px;
+
+        .dashboard-card{
+            padding: 24px;
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 1px 1px rgba(0,0,0,.2);
+            border-radius: 6px;
+
+            .dashboard-icon{
+                background-color: rgba(255,155,68,.2);
+                height: 60px;
+                line-height: 60px;
+                margin-right: 10px;
+                text-align: center;
+                width: 60px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span{
+                    color: #ff902f;
+                    font-size: 30px;
+                    font-weight: 900;
+                }
+            }
+            .card-text{
+                text-align: end;
+                width: 100px;
+            
+            }
+            .card-heading{
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    // ====== sales section ========
+    .sales-cards{
+        display: flex;
+        // background-color: gray;
+        .sales-card{
+            display: flex;
+            width: 48%;
+            color: #fff;
+            height: 300px;
+            // background-color: #25628F;
+            border-radius: 6px;
+            #myChart{
+                height: 300px;
+                width: auto;
+            }
+        }
+    }
+
+    // =========== growth cards ============
+    
+    .growth-cards{
+        display: flex;
+        border-radius: 6px;
+        overflow: hidden;
+        justify-content: space-between;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        margin-bottom: 54px;
+
+        .growth-card{
+            display: flex;
+            padding: 24px;
+            flex-direction: column;
+            gap: 16px;
+            background-color: #fff;
+            box-shadow: 0 1px 1px rgba(0,0,0,.2);
+            font-size: 15px;
+
+            .card-top{
+                display: flex;
+                justify-content: space-between;
+                .green-col{
+                    color: #36ba45 ;
+                }
+                .red{
+                    color: #fc133d ;
+                }
+            }
+            .card-heading{
+                font-size: 24px;
+                font-weight: 500;
+            }
+            .progress-bar{
+                height: 5px;
+                border-radius: 6px;
+                background-color: #e9ecef;
+                width: 193px;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 8px;
+
+                .progress{
+                    background-color:#ff902f ;
+                    position: absolute;
+                    width: 70%;
+                    height: 5px;
+                }
+            }
+            span{
+                color: #7a7c7f;
+            }
+            
+        }
+    }
+
+    // =======  statistics cards ============
+
+    .statistics-cards{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        .statistics-card{
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 6px;
+
+            h3{
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                
+                span{
+                    font-size: 15px;
+                    background-color: rgba(242, 17, 54, .12) ;
+                    color: #e63c3c ;
+                    font-weight: 500;
+                    padding: 4px 10px;
+                    border-radius: 8px;
+                    margin-left: 10px;
+                }
+            }
+            .card-list{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .card-info{
+                    background-color: #fff;
+                    border: 1px solid #e9e9ea;
+                    text-align: center;
+                    padding: 15px;
+                    border-radius: 4px;
+                    .card-detail{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 5px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        .number{
+                            font-weight: 700;
+                        }
+                    }
+                    .progress-bar{
+                        position: relative;
+                        height: 4px;
+                        background-color: #e9ecef;
+                        width: 226px;
+                        border-radius: 6px;
+                        overflow: hidden;
+
+                        .progress{
+                            background-color: #ff902f;
+                            width: 31%;
+                            height: 4px;
+                            position: absolute;
+                        }
+                        .blue-width{
+                            width: 22%;
+                            background-color: #009efb;
+                        }
+                        .red-width, .green-width{
+                            background-color: #fc133d;
+                            width: 62%;
+                        }
+                        .green-width{
+                            background-color: #55ce63;
+                        }
+                        .yellow-width{
+                            background-color: #ffbc34;
+                        }
+                    }
+                }
+            }
+
+            // ==== task card =========
+            .task-cards{
+                display: flex;
+                gap: 32px;
+
+                .task-card{
+                    background-color: #f9f9f9;
+                    border: 1px solid #e2e4e6;
+                    margin-bottom: 24px;
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 500;
+                    width: 116px;
+
+                    .number{
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .progress-bar-task{
+                position: relative;
+                height: 16px;
+                border-radius: 6px;
+                overflow: hidden;
+                font-size: 12px;
+                font-weight: 500;
+                color: #FFF;
+                margin-bottom: 24px;
+
+                .progress{
+                    position: absolute;
+                    height: auto;
+                    background-color: #009efb;
+                    width: 30%;
+                    text-align: center;
+                }
+                .yellow-graph{
+                    position: absolute;
+                    background-color:#ffbc34 ;
+                    left: 30%;
+                    width: 20%;
+                    text-align: center;
+                }
+                .green-graph{
+                    background-color: #55ce63;
+                    left: 50%;
+                    width: 24%;
+                }
+                .red-graph{
+                    background-color: #fc133d;
+                    left: 74%;
+                    width: 21%;
+                }
+                .blue-graph{
+                    background-color: #009efb;
+                    left: 90%;
+                    text-align: start;
+                }
+            }
+            // =====  task list ========
+
+            .task-lists{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .task-list{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 15px;
+                    text-transform: capitalize;
+
+                    span{
+                        font-size: 15px;
+                    }
+                    p{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+            }
+
+            // ===========absent card ================ 
+            .absent-cards{
+                display: flex;
+                flex-direction: column;
+
+                .absent-card{
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid #e9e9ea;
+                    margin: 0 0 15px;
+                    padding: 15px;
+                    gap: 16px;
+                    width: 258px;
+                    font-size: 14px;
+
+                    .absent-image {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        img{
+                            width: 34px;
+                            height: 34px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .absent{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .date{
+                            display: flex;
+                            flex-direction: column;
+                            color: #7a7c7f;
+                            font-weight: 500;
+                            .main-date{
+                                font-weight: 500;
+                                color: black;
+                            }
+                        }
+                        .status-btn{
+                            background-color: rgba(242, 17, 54, .12) ;
+                            color: #e63c3c ;
+                            padding: 2px 6px;
+                            font-size: 11px;
+                            font-weight: 500;
+                            border-radius: 6px;
+
+                        }
+                        .green-col{
+                            background-color: rgba(15, 183, 107, .12) ;
+                            color: #26af48 ;
+                        }
+                    }
+                }
+            }
+            .absent-btn{
+                display: flex;
+                justify-content: center;
+                p{
+                    background-color: #fff;
+                    border: 1px solid #e9e9ea;
+                    font-size: 14px;
+                    padding: 5px 15px;
+                    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                    border-radius: 3px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    // =========== invoice-cards =============
+    .invoice-cards{
+        display: flex;
+        gap: 32px;
+
+        .heading{
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .invoice-card{
+            width: 48%;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 1px rgba(0,0,0,.2);
+            background-color: #ffff;
+            border-radius: 6px;
+
+            .table{
+                overflow-x: auto;
+
+                table{
+                    th{
+                        font-weight: 500;
+                        white-space: nowrap;
+                        border-top: 1px solid #e9e9ea;
+                        padding: 1rem .75rem;
+                        text-align: start;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                    tbody{
+                        tr{
+                            white-space: nowrap;
+                            border-top: 1px solid #e9e9ea;
+                            td{
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                border-top: 1px solid #e9e9ea;
+                                height: 54.67px;
+
+                                
+                                .status-waiting{
+                                    background-color: rgba(255, 152, 0, .12);
+                                    color: #f39c12 ;
+                                    font-weight: 500 ;
+                                    padding: 5px 8px;
+                                    font-size: 12px;
+                                    border-radius: 8px;
+                                }
+                                .status-done{
+                                    background-color: rgba(15, 183, 107, .12);
+                                    color: #26af48;
+                                }
+                                .status-unpaid{
+                                    background-color: rgba(242, 17, 54, .12);
+                                    color: #e63c3c;
+                                }
+                                .client-profile{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    img{
+                                        width: 34px;
+                                        height: 34px;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+            .view-more{
+                display: flex;
+                justify-content: center;
+                padding: 8px;
+                font-size: 15px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    // ============= last two card ===========
+    .client-cards{
+        display: flex;
+        gap: 20px;
+        .client-card{
+            width: 48%;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            border-radius: 6px;
+
+            .heading{
+                padding: 15px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .table{
+                overflow-x: auto;
+
+                table{
+                    width: 100%;
+                    th{
+                        font-weight: 500;
+                        white-space: nowrap;
+                        border-top: 1px solid #e9e9ea;
+                        padding: 1rem .75rem;
+                        text-align: start;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                    tbody{
+                        tr{
+                            white-space: nowrap;
+                            border-top: 1px solid #e9e9ea;
+                            td{
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                border-top: 1px solid #e9e9ea;
+                                height: 54.67px;
+                                position: relative;
+                                
+                                .status-waiting{
+                                    background-color: rgba(255, 152, 0, .12);
+                                    color: #f39c12 ;
+                                    font-weight: 500 ;
+                                    padding: 5px 8px;
+                                    font-size: 12px;
+                                    border-radius: 8px;
+                                }
+                                .status-done{
+                                    background-color: rgba(15, 183, 107, .12);
+                                    color: #26af48;
+                                }
+                                .status-unpaid{
+                                    background-color: rgba(242, 17, 54, .12);
+                                    color: #e63c3c;
+                                }
+                                .client-profile{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    img{
+                                        width: 34px;
+                                        height: 34px;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .client-profile{
+                                    display: flex;
+                                    gap: 10px;
+
+                                    img{
+                                        width: 34px;
+                                        height: 34px;
+                                        border-radius: 50%;
+                                    }
+                                    .name{
+                                        color: #373b3e;
+                                        font-weight: 500;
+                                        span{
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                                .status{
+                                    display: flex;
+                                    text-decoration: none;
+                                    color: black;
+                                    gap: 5px;
+                                    border: 1px solid #d3d3d4;
+                                    border-radius: 30px;
+                                    padding: 5px;
+                                    position: relative;
+                                    input{
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 32px;
+                                        top: 0;
+                                        border-radius: 50%;
+                                        opacity: 0;
+                                    }
+                                }
+                                
+                                .status-dropdown{
+                                    display: none;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                    border: 1px solid rgba(0, 0, 0, .1);
+                                    border-radius: 3px;
+                                    background-color: #fff;
+                                    position: absolute;
+                                    z-index: 11;
+                                    width: 160px;
+                                    padding: 10px;
+                                    margin: 4px 0px;
+
+                                    .active, .Inactive {
+                                        display: flex;
+                                        align-items: center;
+                                        text-decoration: none;
+                                        color: black;
+                                        gap: 5px;
+                                    }
+                                }
+
+                                // ====== Edit or delete 
+                                .status input[type ="checkbox"]{
+                                    position: absolute;
+                                    height: 24px;
+                                    width: 100%;
+                                    opacity: 0;
+                                }
+
+                                input[type ="checkbox"]{
+                                    position: absolute;
+                                    height: 24px;
+                                    width: 24px;
+                                    opacity: 0;
+                                }
+
+
+                                .sub-dropdown{
+                                    display: none;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                    border: 1px solid rgba(0, 0, 0, 0.1);
+                                    border-radius: 3px;
+                                    background-color: #fff;
+                                    position: absolute;
+                                    z-index: 11;
+                                    width: 160px;
+                                    padding: 10px;
+                                    margin: 8px 0px;
+                                    right: 20px;
+
+                                    .active{
+                                        display: flex;
+                                        gap: 10px;
+                                    }
+                                }
+                                input[type ="checkbox"]:checked ~ .sub-dropdown{
+                                    display: flex;
+                                }
+                                .project-detail{
+                                    display: flex;
+                                    flex-direction: column;
+                                    a{
+                                        text-decoration: none;
+                                        color:#212529;
+                                        font-weight: 500;
+                                        font-size: 12px;
+                                        span{
+                                            color: #7A7C7F ;
+                                        }
+                                    }
+                                    .title{
+                                        font-size: 14px;
+                                    }
+                                }
+                                .progrees-bar{
+                                    position: relative;
+                                    width: 65.4px;
+                                    height: 5px;
+                                    background-color: #e9ecef;
+                                    overflow: hidden;
+                                    border-radius: 6px;
+                                    .progress{
+                                        position: absolute;
+                                        width: 65%;
+                                        height: 5px ;
+                                        background-color: #25628F;
+                                    }
+                                }
+
+                                                                
+                                &.dropdown:has(input[type="checkbox"]:checked){
+                                    & .status-dropdown{
+                                        display: flex;
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+            .view-more{
+                display: flex;
+                justify-content: center;
+                padding: 8px;
+                font-size: 15px;
+                background-color: #f7f7f7;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .btn{
+                    line-height: 1.8;
+                }
+            }
+        }
+        
+    }
+}
+
+.main.active{
+    width: calc(100% - 70px);
+    left: 70px;
+    transition: width .5s easy;
+}
+
+.title-section{
+    margin-bottom: 24px;
+    h3{
+        font-size: 26px;
+        font-weight: 500;
+        color: #212529;
+        margin-bottom: 5px;
+    }
+    .subheading{
+        font-weight: 500;
+        color: #4d5154;
+    }
+}
+
+.violet{
+    color:#9368e9 ;
+}
+
+.yellow{
+    // background-color: #ffbc34;
+    color: #ffbc34;
+}
+.green{
+    color: #55ce63;
+}
+.red{
+    color: #fc133d;
+}
+.blue{
+    color: #009efb;
+}
 
 
 
