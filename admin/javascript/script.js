@@ -19,24 +19,38 @@ document.addEventListener("DOMContentLoaded", function() {
     let ctx = document.getElementById('myChart').getContext("2d");
 
     let firstHalf =[2006, 2007, 2008 , 2009 , 2010]
-    let secondHalf =[0, 25, 50 , 75 , 100]
+    let secondHalf =[15, 25, 20 , 10 , 20]
 
-    var neww = new Chart(ctx, {
+    new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["python", "Javascript", "php", "Java", "c##", "C++"],
+            labels: firstHalf,
             datasets: [
                 {
                 data: secondHalf,
-                label:"false",
+                barThickness: 17,
+                // minBarLength: 2,
             }
         ],
         },
         options:{
-            tooltips:{
-                intersect : false,
-                mode:'index'
+            plugins: {
+                tooltip: {
+
+                    // Disable the on-canvas tooltip
+                    enabled: false,
+                    backgroundColor: "white",
+                    bodyColor:"rgb(255, 155, 68)",
+                    titleColor:"black",
+                    x:10,
+                    y:0,
+                    barThickness:17,
+                    // caretX: 10,
                 },
+                filler: {
+                    propagate: true
+                }
+            },
             responsive:false,
         },
         legend:{
