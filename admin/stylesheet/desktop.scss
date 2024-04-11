@@ -1,0 +1,17 @@
+@media screen and (min-width:1025px) and (max-width:1200px) {
+
+    .main{
+        .dashboard-cards, .statistics-cards {
+            flex-wrap: wrap;
+        }
+        .growth-cards .growth-card .progress-bar {
+            width: 140px;
+        }
+        .sales-cards .sales-card #myChart {
+            height: 165px;
+            width: auto;
+        }
+    }
+    
+    
+}

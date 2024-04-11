@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     let ctx = document.getElementById('myChart').getContext("2d");
 
-    let firstHalf =[2006, 2007, 2008 , 2009 , 2010]
+    let firstHalf =[2006, 2007, 2008 , 2009 , 2010, 2011, 2012]
     let secondHalf =[15, 25, 20 , 10 , 20]
 
     new Chart(ctx, {
@@ -27,9 +27,21 @@ document.addEventListener("DOMContentLoaded", function() {
             labels: firstHalf,
             datasets: [
                 {
-                data: secondHalf,
-                barThickness: 17,
-                // minBarLength: 2,
+                    barPercentage: 0.5,
+                    barThickness: 17,
+                    maxBarThickness: 17,
+                    minBarLength: 2,
+                    data: [100, 75, 50, 75, 50, 75, 100],
+                    backgroundColor:"rgb(255, 155, 68)",
+            },
+                {
+                    labels:"label 2",
+                    barPercentage: 0.5,
+                    barThickness: 17,
+                    maxBarThickness: 17,
+                    minBarLength: 2,
+                    data: [90, 65, 40, 65, 40, 65, 90],
+                    backgroundColor:"rgb(252, 96, 117)",
             }
         ],
         },
@@ -38,10 +50,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 tooltip: {
 
                     // Disable the on-canvas tooltip
-                    enabled: false,
+                    enabled: true,
                     backgroundColor: "white",
                     bodyColor:"rgb(255, 155, 68)",
                     titleColor:"black",
+                    title:"hello",
                     x:10,
                     y:0,
                     barThickness:17,
@@ -49,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
                 filler: {
                     propagate: true
-                }
+                },
             },
             responsive:false,
         },

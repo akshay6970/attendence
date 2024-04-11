@@ -1,0 +1,25 @@
+@media screen and (min-width:768px) and (max-width:1024px) {
+    
+
+    // main section
+    .main{
+        .dashboard-cards, .statistics-cards,.growth-cards {
+            flex-wrap: wrap;
+                .dashboard-card{
+                    width: 47% !important;
+                }
+                .growth-card {
+                    width: 50%;
+                    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+                }
+        }
+
+    }
+
+    .navbar-section .container .left-side {
+        width: 71%;
+    }
+    .navbar-section .container .navbar-title {
+        display: none;
+    }
+}
