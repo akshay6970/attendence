@@ -27,16 +27,30 @@
             width: 250px;
             z-index: 1;
             padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
 
             .company-logo{
-                display: block;
+                display: inline-flex;
                 line-height: 60px;
+                align-items: center;
             }
         }
         .toggle{
             padding: 0px 10px;
             cursor: pointer;
+            position: relative;
+            input{
+                position: absolute;
+                width: 100%;
+                opacity: 0;
+                left: 0;
+                height: 100%;
+            }
         }
+
         .navbar-title{
             padding: 17px 20px;
             height: 60px;
@@ -115,6 +129,11 @@
                     .down-icon{
                         transition: .3s easy;
                     }
+                    .title{
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                    }
                 }
                 .dropdown-content{
                     display: none;
@@ -160,6 +179,8 @@
                 margin: 0px 10px;
             }
             .notification{
+                position: relative;
+
                 .notification-icon{
                     position: relative;
                     width: 40px;
@@ -185,7 +206,7 @@
                         border-radius: 50%;
                     }
     
-                    .radio-btn{
+                    input[type="radio"]{
                         position: absolute;
                         opacity: 0;
                         width: 100%;
@@ -194,12 +215,122 @@
                 }
                 .dropdown{
                     position: absolute;
+                    background-color: #FFF;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 3px;
+                    color: #373B3E;
+                    width: 350px;
+                    right: 0;
+                    padding : 10px 0px;
+                    display: none;
+
+                    .clear-btn{
+                        text-decoration: none;
+                        color: #FC133D;
+                        float: right;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                    .dropdown-header{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0px 10px;
+                        border-bottom: 1px solid #ECEDEE;
+                        line-height: 32px;
+                        position: relative;
+                        z-index: 1;
+                        span{
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #373B3E;
+                        }
+                    }
+                    .dropdown-content{
+                        overflow-y: scroll;
+
+                        .notification{
+                            display: flex;
+                            flex-direction: column;
+                            height: 286px;
+
+                            a{
+                                display: block;
+                                text-decoration: none;
+                                color: #373B3E;
+                                font-size: 14px;
+                                padding: 12px;
+                                border-bottom: 1px solid #F5F6F7;
+
+                                .notification-card{
+                                    display: flex;
+                                    gap: 10px;
+                                    line-height: 1.5;
+                                    position: relative;
+                                    z-index: 11;
+                                    font-weight: 500;
+
+                                    img{
+                                        width: 34px;
+                                        height: 34px;
+                                        border-radius: 50%;
+                                    }
+                                    span,.time{
+                                        color: #909294;
+                                        font-weight: 500;
+                                    }
+                                    .time{
+                                        font-size: 12px;
+                                    }
+                                    .text{
+                                        width: 100%;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        .name{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            span{
+                                                font-size: 11px;
+                                            }
+                                        }
+                                        p{
+                                            overflow: hidden;
+                                            text-overflow: ellipsisactie;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .dropdown-footer{
+                        text-align: center;
+                        border-top: 1px solid #ECEDEE;
+                        height: 32px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            color: #373B3E;
+                            font-weight: 500;
+                            font-size: 12px;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+
+            }
+            .notification:has(input[type="radio"]:checked) {
+                & .dropdown{
+                    display: block;
                 }
             }
+            
     
             // user card
             .user-card{
                 position: relative;
+                left: 10px;
                 a{
                     display: flex;
                     margin: 0px 10px;
@@ -226,6 +357,16 @@
                             bottom: 0px;
                             border-radius: 50%;
                             display: inline-block;
+                        }
+                    }
+                    .user-text{
+                        display: flex;
+                        margin-top: 4px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        span{
+                            font-size: 20px;
+                            margin-top: 3px;
                         }
                     }
                 }
@@ -257,7 +398,7 @@
                     display: none;
                     a{
                         display: flex;
-                        color: black;
+                        color: #373B3E;
                         font-size: 14px;
                     }
                 }
@@ -340,9 +481,12 @@
                 gap: 10px;
             }
 
-            .first :hover {
+            .menu :hover {
                 color: #fff;
                 cursor: pointer;
+            }
+            .show{
+                opacity: 1 ;
             }
         }
 
@@ -393,7 +537,7 @@
                 width: 100%;
                 z-index: 22;
             }
-            &.first:has(input[type=radio]:checked){
+            &.menu:has(input[type=radio]:checked){
                 & .dropdown-content{
                     // padding: 6px 0px;
                     left: 0px;
@@ -405,20 +549,20 @@
                     z-index: 1;
                 }
             }
-            &.first:has(input[type=radio]:unchecked){
+            &.menu:has(input[type=radio]:unchecked){
                 & .dropdown-content{
                     opacity: 0;
                     width: 0;
                     height: 0;
                 }
             }
-            &.first:has(input[type=radio]:checked){
+            &.menu:has(input[type=radio]:checked){
                 & .dropdown-content li{
                     display: block;
                     width: 200px;
                 }
             }
-            &.first:has(input[type=radio]:checked){
+            &.menu:has(input[type=radio]:checked){
                 & .down-icon{
                 transform: rotate(90deg);
                 transition: .3s easy;
@@ -450,7 +594,7 @@
             }
         }
 
-        .first .submenu:hover span,.first .submenu:hover .flex {
+        .menu .submenu:hover span,.menu .submenu:hover .flex {
             color: #fff;
             transition: 0.6s ease-in-out;
         }
@@ -468,8 +612,25 @@
     }
     .menu-title{
         opacity: 0;
+        display: none;
     }
 }
+.show{
+    opacity: 1  !important;
+}
+.show-title{
+    opacity: 1 !important;
+    display: flex !important;
+}
+
+.hover-close{
+    width: 88px;
+    transition: .3s easy-in-out;
+}
+
+.side-bar-Container.active:hover {
+    width: 250px; /* Actual width */
+  }
 
 .arrow_up{
     transform: rotate(90deg);
@@ -538,19 +699,33 @@
     // ====== sales section ========
     .sales-cards{
         display: flex;
+        justify-content: space-between;
         // background-color: gray;
         .sales-card{
             display: flex;
+            flex-direction: column;
             width: 48%;
-            color: #fff;
             background-color: #FFF;
             border-radius: 6px;
             margin: 12px 0px 30px 0px;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            height: max-content;
+            padding: 20px;
 
-            #myChart{
+            #myChart, #myChart2 {
                 height: 400px;
                 width: 450px;
+            }
+            #myChart2 {
+                height: 200px;
+                width: auto;
+            }
+            h3{
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.2;
             }
         }
     }
@@ -815,7 +990,7 @@
                             font-weight: 500;
                             .main-date{
                                 font-weight: 500;
-                                color: black;
+                                color: #373B3E;
                             }
                         }
                         .status-btn{
@@ -1162,6 +1337,220 @@
         }
         
     }
+
+    // employee dashbaord
+    .alert-notify{
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 24px;
+        border: 1px solid #55CE63;
+        background: #DDF5E0;
+        color: #373B3E;
+        font-weight: 400;
+        position: relative;
+        .description{
+            line-height: 1.5;
+            display: flex;
+            gap: 5px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .close-notify{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 18px;
+            height: 18px;
+            color: #55CE63;
+            font-weight: 900;
+        }
+    }
+
+    // employee work card
+    .work-detail{
+        display: flex;
+        flex-direction: column;
+
+        // work card
+        .work-card{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .welcome-card{
+                position: relative;
+                background: linear-gradient(90.31deg, #FF902F -1.02%, #FF2D3D 132.59%);
+                padding: 24px;
+                width: 470px;
+                border-radius: 4px;
+                h4{
+                    font-size: 18px;
+                    font-weight: 500;
+                    color:#fff;
+                    line-height: 1.2;
+                    margin-bottom: 5px;
+                }
+                p{
+                    color: #EFF0F1;
+                    span{
+                        color: #fff;
+                        border-bottom: 1px solid white;
+                        padding-bottom: 2px;
+                    }
+                }
+                .description{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 24px;
+                    .welcome-image{
+                        img{
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .welcome-button{
+                    display: inline-flex;
+                    a{
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #373B3E;
+                        background: #FFEBDA;
+                        border: 1px solid #FFAF69;
+                        border-radius: 5px;
+                        line-height: normal;
+                        padding: 9px 12px;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            // statastics card
+            .statstics-card{
+                padding: 24px;
+                background: #fff;
+                width: 470px;
+                border-radius: 4px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+                .statastics-header{
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    h4{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #373B3E;
+                    }
+                    a{
+                        display: inline-flex;
+                        text-decoration: none;
+                        color: #4D5154;
+                        border: 1px solid #D3D3D4;
+                        padding: 6px 10px;
+                        border-radius: 5px;
+                        position: relative;
+                        input{
+                            width: 100%;
+                            position: absolute;
+                            left: 0;
+                            height: 36px;
+                            top: 0;
+                            opacity: 0;
+                        }
+                    }
+                    ul{
+                        position: absolute; 
+                        top: 0;
+                        right: 0;
+                        list-style: none;
+                        width: 160px;
+                        margin-top: 46px;
+                        border-radius: 3px;
+                        padding: 15px;
+                        background: #FFF;
+                        box-shadow: 0px 4px 24px 0px rgba(188, 188, 188, 0.2509803922);
+                        border: 1px solid #E9E9EA;
+                        display: none;
+                        li{
+                            padding: 5px 10px;
+                            color: #4D5154;
+                            border-radius: 5px;
+                            text-transform: capitalize;
+                        }
+                        .down-icon{
+                            transition: 3s easy;
+                        }
+                    }
+                    &.statastics-header:has(input[type="checkbox"]:checked) .day-dropdown {
+                        display: block;
+
+                    }
+                    &.statastics-header:has(input[type="checkbox"]:checked) .down-icon {
+                        transform: rotate(180deg);
+                        transition: 3s easy;
+                    }
+                }
+
+                // work timing
+                .timing-card{
+                    background: #FFF5EC;
+                    border-radius: 5px;
+                    padding: 24px;
+                    .time{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 15px;
+                        .clock-button{
+                            a{
+                                display: inline-flex;
+                                text-decoration: none;
+                                font-size: 15px;
+                                padding: 8px 14px;
+                                background-color: #FF902F;
+                                border: 1px solid #FF902F;
+                                color: #FFF ;
+                                border-radius: 4px;
+                            }
+                        }
+                        h3{
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .detail-card{
+                    display: flex;
+                    justify-content: space-around;
+                    border-bottom: 1px solid #D3D3D4;
+
+                    .time-card{
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                        text-align: center;
+                        h6{
+                            font-size: 14px;
+                            color: #373B3E;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .Attendance-btn{
+                    a{
+                        display: inline-flex;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+        }
+    }
+
 }
 
 .main.active{

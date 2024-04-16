@@ -3,16 +3,57 @@ document.addEventListener("DOMContentLoaded", function () {
     let sideContainer = document.querySelector(".side-bar-Container");
     let title = document.querySelectorAll('.menu-title')
     let main = document.querySelector('.main');
-    let index;
+    let listName = document.querySelectorAll('.title')
 
     toggle.addEventListener("click", function () {
         console.log('you clicked');
         sideContainer.classList.toggle("active");
         main.classList.toggle("active");
-        title.classList.toggle("none");
-
+        title.forEach(function(item) {
+            item.classList.toggle("none");
+        });
     });
+
+    // Add event listener for mouseenter event on sideContainer
+    sideContainer.addEventListener("mouseenter", function() {
+        // Check if sideContainer has the active class
+        if (sideContainer.classList.contains("active")) {
+            // Add additional styles when mouse enters and sideContainer is active
+            sideContainer.style.width = '250px';
+            sideContainer.style.zIndex = '111';
+            // main.style.width = 'calc(100% - 250px)';
+            listName.forEach(function(item) {
+                item.classList.add("show");
+            });
+            title.forEach(function(item) {
+                item.classList.add("show-title");
+            });
+        }else{
+            sideContainer.style.width = '250px';
+        }
+    });
+
+    // Add event listener for mouseleave event on sideContainer
+    sideContainer.addEventListener("mouseleave", function() {
+        // Check if sideContainer has the active class
+        if (sideContainer.classList.contains("active")) {
+            // Remove additional styles when mouse leaves and sideContainer is active
+            sideContainer.classList.add('hover-close'); // Set back to the original width
+            sideContainer.style.zIndex = '';
+
+            listName.forEach(function(item) {
+                item.classList.remove("show");
+            });
+            title.forEach(function(item) {
+                item.classList.remove("show-title");
+            });
+        }else{
+            sideContainer.style.width = '250px';
+        }
+    });
+
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -27,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
             labels: firstHalf,
             datasets: [
                 {
+                    label:"Total Income",
                     barPercentage: 0.5,
                     barThickness: 17,
                     maxBarThickness: 17,
@@ -35,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     backgroundColor:"rgb(255, 155, 68)",
             },
                 {
+                    label:"Total Outcome",
                     labels:"label 2",
                     barPercentage: 0.5,
                     barThickness: 17,
@@ -64,13 +107,66 @@ document.addEventListener("DOMContentLoaded", function() {
                     propagate: true
                 },
             },
-            responsive:false,
+            legend:{
+                display:true,
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            }
         },
-        legend:{
-            display:true,
-            position:"bottom",
-            align:"center",
-        }
+    });
 
+    let lineGraph = document.getElementById("myChart2").getContext("2d");
+
+    
+    new Chart(lineGraph, {
+        type: 'line',
+        data: {
+            labels: firstHalf,
+            datasets: [
+                {
+                    label:"Total Sales",
+                    barPercentage: 0.5,
+                    barThickness: 17,
+                    maxBarThickness: 1,
+                    minBarLength: 1,
+                    data: [50, 75, 50, 75, 50, 75, 100],
+                    backgroundColor:"rgb(255, 155, 68)",
+            },
+                {
+                    label:"Total Revenue",
+                    labels:"label 2",
+                    barPercentage: 0.5,
+                    barThickness: 1,
+                    maxBarThickness: 1,
+                    minBarLength: 2,
+                    data: [90, 65, 40, 65, 40, 65, 50],
+                    backgroundColor:"rgb(252, 96, 117)",
+            }
+        ],
+        },
+        options:{
+            plugins: {
+                tooltip: {
+
+                    // Disable the on-canvas tooltip
+                    enabled: true,
+                    backgroundColor: "white",
+                    bodyColor:"rgb(255, 155, 68)",
+                    titleColor:"black",
+                    title:"hello",
+                    x:10,
+                    y:0,
+                    barThickness:1,
+                    // caretX: 10,
+                },
+            },
+            legend:{
+                display:true,
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            }
+        },
     });
 });
