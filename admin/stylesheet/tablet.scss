@@ -22,4 +22,20 @@
     .navbar-section .container .navbar-title {
         display: none;
     }
+
+    // employee page
+    .main{
+        .work-detail{
+            gap: 24px;
+            .work-card{
+                .welcome-card {
+                    max-width: 350px;
+                    width: 100%;
+                }
+                .statstics-card {
+                    width: 350px;
+                }
+            }
+        }
+    }
 }

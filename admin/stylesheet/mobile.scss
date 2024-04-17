@@ -72,4 +72,23 @@
         width: 100%;
         left: 0px ;
     }
+
+    // ========== employee Page ===============
+
+    .main{
+        .work-detail {
+            flex-direction: column;
+            gap: 24px;
+            .work-card {
+                .welcome-card {
+                    width: auto;
+    
+                }
+                .statstics-card {
+                    width: auto;
+                }
+            }
+        }
+        
+    }
 }
