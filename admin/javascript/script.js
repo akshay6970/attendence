@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // employee page
 
     var tabButtons = document.querySelectorAll(".tablinks");
-    console.log(tabButtons);
+    // console.log(tabButtons);
 
     for (var i = 0; i < tabButtons.length; i++) {
         tabButtons[i].addEventListener("click", function () {
@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector(".tablinks").click();
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -195,3 +194,66 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+// owl Carusel
+document.addEventListener("DOMContentLoaded", function () {
+    var owl = $('#owl-carousel1').owlCarousel({
+        // center:true,
+        loop:true,
+        margin:18,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+
+    $('.prev').click(function() {
+        owl.trigger('prev.owl.carousel');
+    });
+
+    // Next button functionality
+    $('.next').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
+
+    // =========== policy card =======
+    var owl_new = $('#owl-carousel2').owlCarousel({
+        
+        loop:true,
+        margin:18,
+        nav:false,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:2
+            }
+        }
+    });
+
+    $('.prev-policy').click(function() {
+        owl_new.trigger('prev.owl.carousel');
+    });
+
+    // Next button functionality
+    $('.next-policy').click(function() {
+        owl_new.trigger('next.owl.carousel');
+    });
+});
+
+function close_notify(){
+    document.querySelector('.alert-notify').style.display = "none";
+}

@@ -37,5 +37,18 @@
                 }
             }
         }
+
+        .policy-cards {
+            flex-direction: column;
+            gap: 24px;
+            .month-card, .policy-card  {
+                width: 100%;
+                max-width: 726px;
+            }
+        }
+    }
+
+    .main .project-card .project .member .member-imgaes .members {
+        margin-left: 0px;
     }
 }

@@ -14,6 +14,11 @@
     <!-- desktop css file -->
     <link rel="stylesheet" href="stylesheet/desktop.css">
 
+   <!-- Owl Carousel CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
     <!-- tablet file -->
     <link rel="stylesheet" href="stylesheet/tablet.css">
 
@@ -22,6 +27,13 @@
 
     <!-- Js file -->
     <script src="javascript/script.js"></script>
+
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
     <!-- ======== chart.js ============ -->
     
@@ -1009,7 +1021,7 @@
         <div class="alert-notify">
             <p class="description"> <span class="material-symbols-outlined">help </span>
                 Your Leave Request on <span class="notify-date"> “24th April 2024”</span> has been Approved!!!</p>
-                <span class="material-symbols-outlined close-notify">close </span>
+                <span class="material-symbols-outlined close-notify" onclick="close_notify()">close </span>
         </div>
 
         <div class="work-detail">
@@ -1154,15 +1166,15 @@
                 </div>
                 <div class="leaves-card">
                     <div class="leaves-header">
-                        <h4>Attendance & Leaves</h4>
+                        <h4>Working hours</h4>
                         <a href="">
-                            2024 <span class="material-symbols-outlined down-icon">expand_more</span>
+                            This Week <span class="material-symbols-outlined down-icon">expand_more</span>
                             <input type="checkbox">
                         </a>
                         <ul class="day-dropdown">
-                            <li> 2025 </li>
-                            <li> 2026 </li>
-                            <li> 2027 </li>
+                            <li> Last Week </li>
+                            <li> This Month </li>
+                            <li> Last 30 days </li>
                         </ul>
                     </div>
                     <div class="leave-detail">
@@ -1428,12 +1440,242 @@
         </div>
 
         <!-- ====== project card ======= -->
+
         <div class="project-card">
             <div class="header">
                 <div class="title"><p>On Going Projects</p></div>
                 <div class="project-buttons">
-                    <span class="material-symbols-outlined"> arrow_back_ios </span>
-                    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+                    <span class="material-symbols-outlined prev"> arrow_back_ios </span>
+                    <span class="material-symbols-outlined next"> arrow_forward_ios </span>
+                </div>
+            </div>
+
+            <div id="owl-carousel1" class="owl-carousel">
+
+                <div class="project item">
+                    <a class="project-deadline"> <span ></span>Deadline : 10 Feb 2024</a>
+                    <p class="title">Office Management</p>
+                    <p class="description">Design and developing a software application that enables users to make video calls over the internet.</p>
+                    <div class="project-task">
+                        <div class="total">
+                            <span class="total-no">30</span>
+                            <p> Total Tasks </p>
+                        </div>
+                        <div class="total">
+                            <span class="total-no">12</span>
+                            <p> Total Completed </p>
+                        </div>
+                    </div>
+                    <div class="project-leader">
+                        <p>Project Leader : </p>
+                        <a href="">
+                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-18.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="member">
+                        <p>Member : </p>
+                        <div class="member-imgaes">
+                            <div class="members">
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-21.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-16.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-20.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-1.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-23.jpg" alt="">
+                                </a>
+                                <a >
+                                    <span>+10</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project item">
+                    <a class="project-deadline"> <span ></span>Deadline : 10 Feb 2024</a>
+                    <p class="title">Office Management</p>
+                    <p class="description">Design and developing a software application that enables users to make video calls over the internet.</p>
+                    <div class="project-task">
+                        <div class="total">
+                            <span class="total-no">30</span>
+                            <p> Total Tasks </p>
+                        </div>
+                        <div class="total">
+                            <span class="total-no">12</span>
+                            <p> Total Completed </p>
+                        </div>
+                    </div>
+                    <div class="project-leader">
+                        <p>Project Leader : </p>
+                        <a href="">
+                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-18.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="member">
+                        <p>Member : </p>
+                        <div class="member-imgaes">
+                            <div class="members">
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-21.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-16.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-20.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-1.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-23.jpg" alt="">
+                                </a>
+                                <a >
+                                    <span>+10</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project item">
+                    <a class="project-deadline"> <span ></span>Deadline : 10 Feb 2024</a>
+                    <p class="title">Office Management</p>
+                    <p class="description">Design and developing a software application that enables users to make video calls over the internet.</p>
+                    <div class="project-task">
+                        <div class="total">
+                            <span class="total-no">30</span>
+                            <p> Total Tasks </p>
+                        </div>
+                        <div class="total">
+                            <span class="total-no">12</span>
+                            <p> Total Completed </p>
+                        </div>
+                    </div>
+                    <div class="project-leader">
+                        <p>Project Leader : </p>
+                        <a href="">
+                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-18.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="member">
+                        <p>Member : </p>
+                        <div class="member-imgaes">
+                            <div class="members">
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-21.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-16.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-20.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-1.jpg" alt="">
+                                </a>
+                                <a >
+                                    <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-23.jpg" alt="">
+                                </a>
+                                <a >
+                                    <span>+10</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+        </div>
+
+        <!-- ====== policy cards ======= -->
+
+        <div class="policy-cards">
+            <div class="month-card">
+                <div class="card">
+                    <div>
+                        <p class="title"> Employee of the month </p>
+                        <p class="description"> We are really proud of the difference you have made which gives everybody the reason to applaud & appreciate</p>
+                        <span class="name">Congrats, Hanna</span>
+                        <p class="designation">UI/UX Team Lead</p>
+                    </div>
+                    <div>
+                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/employee-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="header">
+                    <div class="title"><p>Company Policy</p></div>
+                    <div class="project-buttons">
+                        <span class="material-symbols-outlined prev-policy owl-prev"> arrow_back_ios </span>
+                        <span class="material-symbols-outlined next-policy owl-next"> arrow_forward_ios </span>
+                    </div>
+                </div> 
+                <div id="owl-carousel2" class="owl-carousel">
+
+                    <!-- ===== hr card =====  -->
+                    <div class="card hr-card  item">
+                        <div class="title">
+                            <span class="">HR</span>
+                            <p class="card-heading"> <a> HR Policy </a> </p>
+                        </div>
+                        <div class="card-bottom">
+                            <div>
+                                <p>Policy Name : Work policy</p>
+                                <p>Updated on : Today</p>
+                            </div>
+                            <div class="card-icon">
+                                <span class="material-symbols-outlined"> download_2 </span>
+                                <span class="material-symbols-outlined"> visibility </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====== Employee Card ====== -->
+                    <div class="card emp-card item">
+                        <div class="title">
+                            <span class="">EP</span>
+                            <p class="card-heading"> <a> Employer Policy </a> </p>
+                        </div>
+                        <div class="card-bottom">
+                            <div>
+                                <p>Policy Name :  parking</p>
+                                <p>Updated on : 25 Jan 2024</p>
+                            </div>
+                            <div class="card-icon">
+                                <span class="material-symbols-outlined"> download_2 </span>
+                                <span class="material-symbols-outlined"> visibility </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ====== leave Policy ====== -->
+                    <div class="card leave-card item">
+                        <div class="title">
+                            <span class="">LP</span>
+                            <p class="card-heading"> <a> Leave Policy </a> </p>
+                        </div>
+                        <div class="card-bottom">
+                            <div>
+                                <p>Policy Name :  parking</p>
+                                <p>Updated on : 25 Jan 2024</p>
+                            </div>
+                            <div class="card-icon">
+                                <span class="material-symbols-outlined"> download_2 </span>
+                                <span class="material-symbols-outlined"> visibility </span>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
