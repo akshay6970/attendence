@@ -14,14 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Add event listener for mouseenter event on sideContainer
+    // date picker liberary
+    $('.js-example-basic-single').select2();
+
+    $(function() {
+        $("#datepicker").datepicker({
+            dateFormat: 'yy-mm-dd',
+            minDate: 0 // minimum selectable date is today
+        });
+    });
+
+
+    //  hover on side bar
+    
     sideContainer.addEventListener("mouseenter", function () {
+
         // Check if sideContainer has the active class
         if (sideContainer.classList.contains("active")) {
             // Add additional styles when mouse enters and sideContainer is active
             sideContainer.style.width = '250px';
             sideContainer.style.zIndex = '111';
-            // main.style.width = 'calc(100% - 250px)';
+            
             listName.forEach(function (item) {
                 item.classList.add("show");
             });
@@ -33,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Add event listener for mouseleave event on sideContainer
+    // hover out on SideBar
     sideContainer.addEventListener("mouseleave", function () {
         // Check if sideContainer has the active class
         if (sideContainer.classList.contains("active")) {
@@ -52,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // employee page
+    // employee page tab 
 
     var tabButtons = document.querySelectorAll(".tablinks");
     // console.log(tabButtons);
@@ -113,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
         },
         options: {
+            animation: false,
             plugins: {
                 tooltip: {
 
@@ -129,6 +143,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 filler: {
                     propagate: true
+                },
+                legend: {
+                    display: false
                 },
             },
             legend: {
@@ -184,6 +201,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     barThickness: 1,
                     // caretX: 10,
                 },
+                legend: {
+                    display: false
+                },
             },
             legend: {
                 display: true,
@@ -199,61 +219,174 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     var owl = $('#owl-carousel1').owlCarousel({
         // center:true,
-        loop:true,
-        margin:18,
-        nav:false,
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        margin: 18,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            1000:{
-                items:3
+            1000: {
+                items: 3
             }
         }
     });
 
-    $('.prev').click(function() {
+    $('.prev').click(function () {
         owl.trigger('prev.owl.carousel');
     });
 
     // Next button functionality
-    $('.next').click(function() {
+    $('.next').click(function () {
         owl.trigger('next.owl.carousel');
     });
 
     // =========== policy card =======
     var owl_new = $('#owl-carousel2').owlCarousel({
-        
-        loop:true,
-        margin:18,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
+
+        loop: true,
+        margin: 18,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:2
+            600: {
+                items: 2
             },
-            1000:{
-                items:2
+            1000: {
+                items: 2
             }
         }
     });
 
-    $('.prev-policy').click(function() {
+    $('.prev-policy').click(function () {
         owl_new.trigger('prev.owl.carousel');
     });
 
     // Next button functionality
-    $('.next-policy').click(function() {
+    $('.next-policy').click(function () {
         owl_new.trigger('next.owl.carousel');
     });
 });
 
-function close_notify(){
+function close_notify() {
     document.querySelector('.alert-notify').style.display = "none";
 }
+
+//  ============ Deal Page  ====================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const total = document.getElementById('total-deal').getContext("2d");
+
+    new Chart(total, {
+        type: 'bar',
+        data: {
+            labels: ['Inpipeline', 'Follow Up', 'Schdule', 'Conversation', 'Won', 'Lost'],
+            datasets: [{
+                label: '# of Votes',
+                data: [400, 30, 248, 470, 470, 180],
+                borderWidth: 1,
+                backgroundColor: "rgba(255, 195, 143, 0.85)",
+            }]
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: "white",
+                    bodyColor: "rgb(255, 155, 68)",
+                    titleColor: "black",
+                    title: "hello",
+                    x: 10,
+                    y: 0,
+                    barThickness: 6,
+                },
+                legend: {
+                    display: false
+                },
+            },
+
+        },
+    });
+
+    const lostDeal = document.getElementById('lost-deal').getContext("2d");
+
+    new Chart(lostDeal, {
+        type: 'bar',
+        data: {
+            labels: ['conversation', 'Follow Up','Inpipeline' ],
+            datasets: [{
+                label: '# of Votes',
+                data: [400, 30, 448],
+                borderWidth: 1,
+                backgroundColor: "rgba(249, 108, 133, 0.85)",
+                barPercentage: 0.5,
+                barThickness: 17,
+                maxBarThickness: 100,
+                minBarLength: 2,
+            }]
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: "white",
+                    bodyColor: "rgb(255, 155, 68)",
+                    titleColor: "black",
+                    title: "hello",
+                    x: 10,
+                    y: 0,
+                    barThickness: 1,
+                },
+                legend: {
+                    display: false
+                },
+            },
+            indexAxis: 'y',
+        },
+    });
+
+    const wonDeal = document.getElementById('won-deal').getContext("2d");
+
+    new Chart(wonDeal, {
+        type: 'bar',
+        data: {
+            labels: ['conversation', 'Follow Up','Inpipeline' ],
+            datasets: [{
+                label: '# of Votes',
+                data: [400, 122, 250],
+                borderWidth: 1,
+                backgroundColor: "rgba(119, 216, 130, 0.85)",
+                barPercentage: 0.5,
+                barThickness: 17,
+                maxBarThickness: 100,
+                minBarLength: 2,
+            }]
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: "white",
+                    bodyColor: "rgb(255, 155, 68)",
+                    titleColor: "black",
+                    title: "hello",
+                    x: 10,
+                    y: 0,
+                    barThickness: 1,
+                },
+                legend: {
+                    display: false
+                },
+            },
+            indexAxis: 'y',
+        },
+    });
+
+});
