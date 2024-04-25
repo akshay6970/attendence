@@ -21,10 +21,7 @@
     <!-- mobile file -->
     <link rel="stylesheet" href="stylesheet/mobile.css">
 
-    <!-- select to -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Js file -->
+    <!-- ======== Js file =======  -->
     <script src="javascript/script.js"></script>
 
     <!-- ======== chart.js ============ -->
@@ -33,6 +30,10 @@
 
     <!-- ========== select-to liberary ========== -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
         .material-symbols-outlined {
@@ -353,25 +354,14 @@
                         </div>
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
+                    
                     <ul class="dropdown-content">
-                        <li><a href="#">
-                                <div class="circle"></div> Chat
-                            </a></li>
-                        <li><a href="#">
-                                <div class="circle"></div> Calls
-                            </a></li>
-                        <li><a href="#">
-                                <div class="circle"></div> Calender
-                            </a></li>
-                        <li><a href="#">
-                                <div class="circle"></div> Contacts
-                            </a></li>
-                        <li><a href="#">
-                                <div class="circle"></div> Email
-                            </a></li>
-                        <li><a href="#">
-                                <div class="circle"></div> File Manager
-                            </a></li>
+                        <li><a href="chat.html"> <div class="circle"></div> Chat</a></li>
+                        <li><a href="#"> <div class="circle"></div> Calls </a></li>
+                        <li><a href="#"> <div class="circle"></div> Calender </a></li>
+                        <li><a href="#"> <div class="circle"></div> Contacts </a></li>
+                        <li><a href="#"> <div class="circle"></div> Email </a></li>
+                        <li><a href="#"> <div class="circle"></div> File Manager </a></li>
                     </ul>
                 </li>
 
@@ -720,12 +710,15 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a>
+                        <li>
+                            <a>
                                 <div class="circle gray"></div> Goals List
                             </a></li>
-                        <li><a>
+                        <li>
+                            <a>
                                 <div class="circle gray"></div> Goals Type
-                            </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -1396,7 +1389,7 @@
                 <div class="common-btn">
                     <span class="material-symbols-outlined"> refresh </span>
                 </div>
-                <div class="common-btn">
+                <div class="common-btn full-btn">
                     <span class="material-symbols-outlined"  onclick="openFullscreen(); exitFullScreen()"> open_with </span>
                 </div>
                 <!-- ==== export modal ==== -->
@@ -1433,10 +1426,9 @@
                                     <h6>Filters</h6>
                                     <div class="input">
                                         <label for="">Fields<span>*</span></label>
-                                        <select name="cars" id="cars" class="js-example-basic-single">
-                                            <option value="volvo"> All Fields </option>
-                                            <option value="saab">Contact</option>
-                                            <option value="opel">Company</option>
+                                        <select class="js-example-basic" name="states" >
+                                            <option value="AL"> Contact </option>
+                                            <option value="WY"> Company </option>
                                           </select>
                                     </div>
                                     <div class="date-input">
@@ -1446,7 +1438,7 @@
                                         </div>
                                         <div class="input">
                                             <label for="">To Date<span>*</span></label>
-                                            <input id="datepicker" type="date" class="datepicker-input">
+                                            <!-- <input id="datepicker2" type="date" class="datepicker-input"> -->
                                         </div>
                                     </div>
                                     <div class="bottom-buttons">
@@ -1478,9 +1470,9 @@
                 </div>
                 <div class="common-btn calendar_month">
                     <span class="material-symbols-outlined"> deployed_code_account </span>
-                    <select>
-                        <option > Deals Dashboard </option>
-                        <option >Leads Dashboard</option>
+                    <select class="dashboard-dropdown" name="states" >
+                        <option value="AL">Deals Dashboard</option>
+                        <option value="WY">Leads Dashboard</option>
                       </select>
                 </div>
             </div>
@@ -1708,6 +1700,11 @@
             </div>
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+        <!-- ==== jQuery =====  -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
@@ -1766,7 +1763,6 @@
                 }
                 }
 
-                $('.js-example-basic-single').select2();
         </script>
 
     </div>

@@ -107,4 +107,17 @@
         flex-wrap: wrap;
         justify-content: end;
     }
+
+    // lead page
+    .title-section {
+        flex-wrap: wrap;
+        gap: 10px;
+        .right-section {
+            flex-wrap: wrap;
+        }
+    }
+    .title-section .right-section  .full-btn{
+        display: none;
+    }
+
 }

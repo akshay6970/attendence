@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    
+
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- css file -->
     <link rel="stylesheet" href="stylesheet/style.css">
@@ -20,21 +21,41 @@
     <!-- mobile file -->
     <link rel="stylesheet" href="stylesheet/mobile.css">
 
-    <!-- Js file -->
+    <!-- ======== Js file =======  -->
     <script src="javascript/script.js"></script>
 
     <!-- ======== chart.js ============ -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- ========== select-to liberary ========== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 200,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+
 </head>
+
 <body>
-    <!-- navbar section -->
+    <div class="body">
+            <!-- navbar section -->
     <div class="navbar-section">
         <div class="container">
             <div class="logo">
                 <a href="#" class="company-logo">
-                    <img src="https://assets-global.website-files.com/651ab75e84df700085685212/651ae4331d89d9c909e44c31_poplify%20logo%20black.png" class="image" alt="">
+                    <img src="https://assets-global.website-files.com/651ab75e84df700085685212/651ae4331d89d9c909e44c31_poplify%20logo%20black.png"
+                        class="image" alt="">
                 </a>
             </div>
             <div class="toggle">
@@ -55,23 +76,27 @@
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
                         <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/us.png" alt="">
-                            <p class="title">English</p>
+                        <p class="title">English</p>
                         <span class="material-symbols-outlined down-icon">expand_more</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a href="#"> 
-                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/us.png" alt="">English </a></li>
                         <li><a href="#">
-                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/fr.png" alt=""> French </a></li>
+                                <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/us.png"
+                                    alt="">English </a></li>
                         <li><a href="#">
-                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/es.png" alt="">  Spanish </a></li>
+                                <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/fr.png"
+                                    alt=""> French </a></li>
                         <li><a href="#">
-                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/de.png" alt="">  German </a></li>
-                      </ul>
+                                <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/es.png"
+                                    alt=""> Spanish </a></li>
+                        <li><a href="#">
+                                <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/flags/de.png"
+                                    alt=""> German </a></li>
+                    </ul>
                 </li>
-    
+
                 <div class="line">
-                    
+
                 </div>
                 <div class="notification">
                     <div class="notification-icon">
@@ -89,7 +114,8 @@
 
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-02.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-02.jpg"
+                                            alt="">
 
                                         <div>
                                             <p> John Doe <span>added new task</span> Patient appointment booking
@@ -101,10 +127,12 @@
 
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-03.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-03.jpg"
+                                            alt="">
 
                                         <div>
-                                            <p> Tarah Shropshire <span> changed the task name </span> Appointment booking with payment gateway
+                                            <p> Tarah Shropshire <span> changed the task name </span> Appointment
+                                                booking with payment gateway
                                             </p>
                                             <p class="time">6 mins ago</p>
                                         </div>
@@ -113,10 +141,12 @@
 
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-06.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-06.jpg"
+                                            alt="">
 
                                         <div>
-                                            <p> Misty Tison <span>added</span> Domenic Houston <span>and </span>Claire Mapes <span> to project </span> Doctor available module
+                                            <p> Misty Tison <span>added</span> Domenic Houston <span>and </span>Claire
+                                                Mapes <span> to project </span> Doctor available module
                                             </p>
                                             <p class="time">8 mins ago</p>
                                         </div>
@@ -125,10 +155,12 @@
 
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-17.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-17.jpg"
+                                            alt="">
 
                                         <div>
-                                            <p> Rolland Webber <span> completed task </span>Patient and Doctor video conferencing
+                                            <p> Rolland Webber <span> completed task </span>Patient and Doctor video
+                                                conferencing
                                             </p>
                                             <p class="time">12 mins ago</p>
                                         </div>
@@ -137,7 +169,8 @@
 
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-13.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-13.jpg"
+                                            alt="">
 
                                         <div>
                                             <p> Bernardo Galaviz <span>added new task</span>Private chat module
@@ -150,7 +183,7 @@
                             </div>
                         </div>
                         <div class="dropdown-footer">
-                            <a href="" >View all Notifications</a>
+                            <a href="">View all Notifications</a>
                         </div>
                     </div>
                 </div>
@@ -170,66 +203,76 @@
 
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-09.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-09.jpg"
+                                            alt="">
 
                                         <div class="text">
                                             <div class="name">
                                                 <p> Richard Miles </p>
                                                 <span>12:28 AM</span>
                                             </div>
-                                            <p > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, omnis!</p>
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+                                                omnis!</p>
                                         </div>
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-02.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-02.jpg"
+                                            alt="">
 
                                         <div class="text">
                                             <div class="name">
                                                 <p> Richard Miles </p>
                                                 <span>12:28 AM</span>
                                             </div>
-                                            <p > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, omnis!</p>
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+                                                omnis!</p>
                                         </div>
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-03.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-03.jpg"
+                                            alt="">
 
                                         <div class="text">
                                             <div class="name">
                                                 <p> Richard Miles </p>
                                                 <span>12:28 AM</span>
                                             </div>
-                                            <p > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, omnis!</p>
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+                                                omnis!</p>
                                         </div>
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-06.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-06.jpg"
+                                            alt="">
 
                                         <div class="text">
                                             <div class="name">
                                                 <p> Richard Miles </p>
                                                 <span>12:28 AM</span>
                                             </div>
-                                            <p > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, omnis!</p>
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+                                                omnis!</p>
                                         </div>
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="notification-card">
-                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-08.jpg" alt="">
+                                        <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/profiles/avatar-08.jpg"
+                                            alt="">
 
                                         <div class="text">
                                             <div class="name">
                                                 <p> Richard Miles </p>
                                                 <span>12:28 AM</span>
                                             </div>
-                                            <p > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, omnis!</p>
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+                                                omnis!</p>
                                         </div>
                                     </div>
                                 </a>
@@ -238,15 +281,16 @@
                             </div>
                         </div>
                         <div class="dropdown-footer">
-                            <a href="" >View all Messages</a>
+                            <a href="">View all Messages</a>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="user-card">
                     <a href="">
                         <div class="user-image">
-                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-27.jpg" alt="">
+                            <img src="https://smarthr.dreamstechnologies.com/html/template/assets/img/avatar/avatar-27.jpg"
+                                alt="">
                             <div class="circle"></div>
                         </div>
                         <div class="user-text">
@@ -268,7 +312,9 @@
     <div class="side-bar">
         <div class="side-bar-Container">
             <ul>
-                <li class="menu-title"><div class="title-circle"></div> Main </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> Main
+                </li>
 
                 <!-- ======= Dashboard ======== -->
 
@@ -282,10 +328,18 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li class="col-yellow"><a href="dashboard.html"><div class="circle"></div>Admin Dashboard</a></li>
-                        <li><a href="empDashboard.html"> <div class="circle"></div>Employee Dashboard</a></li>
-                        <li><a href="dealDashboard.html"> <div class="circle"></div> Deals Dashboard</a></li>
-                        <li><a href="leadDashboard.html"> <div class="circle"></div> Leads Dashboard</a></li>
+                        <li class="col-yellow"><a href="dashboard.html">
+                                <div class="circle"></div>Admin Dashboard
+                            </a></li>
+                        <li><a href="empDashboard.html">
+                                <div class="circle"></div>Employee Dashboard
+                            </a></li>
+                        <li><a href="dealDashboard.html">
+                                <div class="circle"></div> Deals Dashboard
+                            </a></li>
+                        <li><a href="leadDashboard.html">
+                                <div class="circle"></div> Leads Dashboard
+                            </a></li>
                     </ul>
                 </li>
 
@@ -301,16 +355,18 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a href="#"> <div class="circle"></div> Chat</a></li>
+                        <li><a href="chat.html"> <div class="circle"></div> Chat</a></li>
                         <li><a href="#"> <div class="circle"></div> Calls </a></li>
                         <li><a href="#"> <div class="circle"></div> Calender </a></li>
                         <li><a href="#"> <div class="circle"></div> Contacts </a></li>
                         <li><a href="#"> <div class="circle"></div> Email </a></li>
                         <li><a href="#"> <div class="circle"></div> File Manager </a></li>
-                    </ul> 
+                    </ul>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> Employees </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> Employees
+                </li>
 
                 <!--  =======  Employee  =========  -->
 
@@ -324,19 +380,43 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a href="#"> <div class="circle"></div> All Employees</a></li>
-                        <li><a href="#"> <div class="circle"></div> Holidays </a></li>
-                        <li><a href="#"> <div class="circle"></div> Leaves(Admin) </a></li>
-                        <li><a href="#"> <div class="circle"></div> Leaves(Emplpoyee) </a></li>
-                        <li><a href="#"> <div class="circle"></div> Leaves Settings </a></li>
-                        <li><a href="#"> <div class="circle"></div> Attendence(Admin) </a></li>
-                        <li><a href="#"> <div class="circle"></div> Attendence(Emplpoyee) </a></li>
-                        <li><a href="#"> <div class="circle"></div> Departments </a></li>
-                        <li><a href="#"> <div class="circle"></div> Designations </a></li>
-                        <li><a href="#"> <div class="circle"></div> Timesheet </a></li>
-                        <li><a href="#"> <div class="circle"></div> Shift & Schdule </a></li>
-                        <li><a href="#"> <div class="circle"></div> Overtime </a></li>
-                    </ul> 
+                        <li><a href="#">
+                                <div class="circle"></div> All Employees
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Holidays
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Leaves(Admin)
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Leaves(Emplpoyee)
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Leaves Settings
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Attendence(Admin)
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Attendence(Emplpoyee)
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Departments
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Designations
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Timesheet
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Shift & Schdule
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle"></div> Overtime
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======= Clients ========  -->
@@ -363,10 +443,16 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a href="#"> <div class="circle gray"></div> Projects </a></li>
-                        <li><a href="#"> <div class="circle gray"></div> Tasks </a></li>
-                        <li><a href="#"> <div class="circle gray"></div> Task Board </a></li>
-                    </ul> 
+                        <li><a href="#">
+                                <div class="circle gray"></div> Projects
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle gray"></div> Tasks
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle gray"></div> Task Board
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- =======  Tickets start ======== -->
@@ -381,12 +467,18 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a href="#"> <div class="circle gray"></div> Tickets </a></li>
-                        <li><a href="#"> <div class="circle gray"></div> Tickets Detail </a></li>
-                    </ul> 
+                        <li><a href="#">
+                                <div class="circle gray"></div> Tickets
+                            </a></li>
+                        <li><a href="#">
+                                <div class="circle gray"></div> Tickets Detail
+                            </a></li>
+                    </ul>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> CRM </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> CRM
+                </li>
 
                 <!-- ======== contacts ========== -->
                 <li class="submenu">
@@ -432,7 +524,9 @@
                     </a>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> HR </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> HR
+                </li>
 
                 <!-- ========   Sales ==========  -->
 
@@ -446,16 +540,28 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Estimates </a></li>
-                        <li><a > <div class="circle gray"></div> Invoices </a></li>
-                        <li><a > <div class="circle gray"></div> Payments </a></li>
-                        <li><a > <div class="circle gray"></div> Expenses </a></li>
-                        <li><a > <div class="circle gray"></div> Provident Fund </a></li>
-                        <li><a > <div class="circle gray"></div> Taxes </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Estimates
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Invoices
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Payments
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Expenses
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Provident Fund
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Taxes
+                            </a></li>
+                    </ul>
                 </li>
 
-                  <!-- ========   Accounting ==========  -->
+                <!-- ========   Accounting ==========  -->
 
                 <li class="menu">
                     <div class="submenu">
@@ -467,11 +573,19 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Categories </a></li>
-                        <li><a > <div class="circle gray"></div> Budgets </a></li>
-                        <li><a > <div class="circle gray"></div> Budget Expenses </a></li>
-                        <li><a > <div class="circle gray"></div> Budget Revenues </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Categories
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Budgets
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Budget Expenses
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Budget Revenues
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ========   Payroll ==========  -->
@@ -485,12 +599,18 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Employee Salary </a></li>
-                        <li><a > <div class="circle gray"></div> Payslip </a></li>
-                        <li><a > <div class="circle gray"></div> Payroll Items </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Employee Salary
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Payslip
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Payroll Items
+                            </a></li>
+                    </ul>
                 </li>
-                
+
                 <!-- ========   Payroll ==========  -->
                 <li class="menu">
                     <div class="submenu">
@@ -501,7 +621,7 @@
                         </div>
                     </div>
                 </li>
-                
+
                 <!-- ======== Reports  ========== -->
                 <li class="menu">
                     <div class="submenu">
@@ -513,21 +633,45 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Expense Report </a></li>
-                        <li><a > <div class="circle gray"></div> Invoice Report </a></li>
-                        <li><a > <div class="circle gray"></div> Payments Report </a></li>
-                        <li><a > <div class="circle gray"></div> Project Report </a></li>
-                        <li><a > <div class="circle gray"></div> Task Report </a></li>
-                        <li><a > <div class="circle gray"></div> User Report </a></li>
-                        <li><a > <div class="circle gray"></div> Employee Report </a></li>
-                        <li><a > <div class="circle gray"></div> Payslip Report </a></li>
-                        <li><a > <div class="circle gray"></div> Attendence Report </a></li>
-                        <li><a > <div class="circle gray"></div> Leave Report </a></li>
-                        <li><a > <div class="circle gray"></div> Daily Report </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Expense Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Invoice Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Payments Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Project Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Task Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> User Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Employee Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Payslip Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Attendence Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Leave Report
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Daily Report
+                            </a></li>
+                    </ul>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> Performance </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> Performance
+                </li>
 
                 <!-- ======== Performance  ========== -->
 
@@ -541,10 +685,16 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Performance Indicator </a></li>
-                        <li><a > <div class="circle gray"></div> Performance Review </a></li>
-                        <li><a > <div class="circle gray"></div> Performance Appraisal </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Performance Indicator
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Performance Review
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Performance Appraisal
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Goals  ========== -->
@@ -559,9 +709,13 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Goals List </a></li>
-                        <li><a > <div class="circle gray"></div> Goals Type </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Goals List
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Goals Type
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Edit  ========== -->
@@ -576,14 +730,20 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Training List </a></li>
-                        <li><a > <div class="circle gray"></div> Trainers </a></li>
-                        <li><a > <div class="circle gray"></div> Training Type </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Training List
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Trainers
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Training Type
+                            </a></li>
+                    </ul>
                 </li>
-                
+
                 <!-- ======== Promotion  ========== -->
-                
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -595,7 +755,7 @@
                 </li>
 
                 <!-- ======== Resignation  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -608,7 +768,7 @@
                 </li>
 
                 <!-- ======== Termination  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -619,14 +779,18 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Termination List </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Termination List
+                            </a></li>
+                    </ul>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> administration </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> administration
+                </li>
 
                 <!-- ======== Assets  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -636,9 +800,9 @@
                         </div>
                     </div>
                 </li>
-                
+
                 <!-- ======== Jobs  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -649,22 +813,44 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> User Dashboard </a></li>
-                        <li><a > <div class="circle gray"></div> Jobs Dashboard </a></li>
-                        <li><a > <div class="circle gray"></div> Manage Jobs </a></li>
-                        <li><a > <div class="circle gray"></div> Manage Resumes </a></li>
-                        <li><a > <div class="circle gray"></div> Shorlist Candidates </a></li>
-                        <li><a > <div class="circle gray"></div> Interview Questions </a></li>
-                        <li><a > <div class="circle gray"></div> Offer Approvals </a></li>
-                        <li><a > <div class="circle gray"></div> Experience Level </a></li>
-                        <li><a > <div class="circle gray"></div> Candidates List </a></li>
-                        <li><a > <div class="circle gray"></div> Schedule timing </a></li>
-                        <li><a > <div class="circle gray"></div> Aptitude Results </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> User Dashboard
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Jobs Dashboard
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Manage Jobs
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Manage Resumes
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Shorlist Candidates
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Interview Questions
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Offer Approvals
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Experience Level
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Candidates List
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Schedule timing
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Aptitude Results
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Knowledgebase  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -676,7 +862,7 @@
                 </li>
 
                 <!-- ======== Users  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -688,7 +874,7 @@
                 </li>
 
                 <!-- ======== Settings  ========== -->
-    
+
                 <li class="menu">
                     <div class="submenu">
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
@@ -699,7 +885,9 @@
                     </div>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> pages </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> pages
+                </li>
 
                 <!-- ======== Profile  ========== -->
 
@@ -713,9 +901,13 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Employee Profile </a></li>
-                        <li><a > <div class="circle gray"></div> Client Profile </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Employee Profile
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Client Profile
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== authentication  ========== -->
@@ -730,12 +922,22 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Login </a></li>
-                        <li><a > <div class="circle gray"></div> Register </a></li>
-                        <li><a > <div class="circle gray"></div> Forget Password </a></li>
-                        <li><a > <div class="circle gray"></div> OTP </a></li>
-                        <li><a > <div class="circle gray"></div> Lock Screen </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Login
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Register
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Forget Password
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> OTP
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Lock Screen
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Error page  ========== -->
@@ -750,9 +952,13 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> 404 Error </a></li>
-                        <li><a > <div class="circle gray"></div> 500 Error </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> 404 Error
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> 500 Error
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Subscription page  ========== -->
@@ -767,10 +973,16 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Subscriptions(Admin) </a></li>
-                        <li><a > <div class="circle gray"></div> Subscriptions(Company) </a></li>
-                        <li><a > <div class="circle gray"></div> Subscribed companies </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Subscriptions(Admin)
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Subscriptions(Company)
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Subscribed companies
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Pages  ========== -->
@@ -785,17 +997,33 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Search </a></li>
-                        <li><a > <div class="circle gray"></div> FAQ </a></li>
-                        <li><a > <div class="circle gray"></div> Terms </a></li>
-                        <li><a > <div class="circle gray"></div> Privacy Policy </a></li>
-                        <li><a > <div class="circle gray"></div> Blank Page </a></li>
-                        <li><a > <div class="circle gray"></div> Coming Soon </a></li>
-                        <li><a > <div class="circle gray"></div> Under Maintanance </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Search
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> FAQ
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Terms
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Privacy Policy
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Blank Page
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Coming Soon
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Under Maintanance
+                            </a></li>
+                    </ul>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> Ui Interface </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> Ui Interface
+                </li>
 
                 <!-- ======== Base UI  ========== -->
 
@@ -809,38 +1037,100 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Alerts  </a></li>
-                        <li><a > <div class="circle gray"></div> Accordian  </a></li>  
-                        <li><a > <div class="circle gray"></div> Avatar  </a></li>  
-                        <li><a > <div class="circle gray"></div> Badges  </a></li>  
-                        <li><a > <div class="circle gray"></div> Border  </a></li>  
-                        <li><a > <div class="circle gray"></div> Buttons  </a></li>  
-                        <li><a > <div class="circle gray"></div> Button Group </a></li>  
-                        <li><a > <div class="circle gray"></div> Breadcrumb  </a></li>  
-                        <li><a > <div class="circle gray"></div> Card  </a></li>  
-                        <li><a > <div class="circle gray"></div> Carousel  </a></li>  
-                        <li><a > <div class="circle gray"></div> Colors  </a></li> 
-                        <li><a > <div class="circle gray"></div> Dropdowns  </a></li> 
-                        <li><a > <div class="circle gray"></div> Grid  </a></li> 
-                        <li><a > <div class="circle gray"></div> Images  </a></li> 
-                        <li><a > <div class="circle gray"></div> Lightbox  </a></li> 
-                        <li><a > <div class="circle gray"></div> Media  </a></li> 
-                        <li><a > <div class="circle gray"></div> MOdals  </a></li> 
-                        <li><a > <div class="circle gray"></div> Notification  </a></li> 
-                        <li><a > <div class="circle gray"></div> Offcanvas  </a></li> 
-                        <li><a > <div class="circle gray"></div> Pagination  </a></li> 
-                        <li><a > <div class="circle gray"></div> Popovers  </a></li> 
-                        <li><a > <div class="circle gray"></div> Progress  </a></li> 
-                        <li><a > <div class="circle gray"></div> Placeholder  </a></li> 
-                        <li><a > <div class="circle gray"></div> Range Slider  </a></li> 
-                        <li><a > <div class="circle gray"></div> Spinner   </a></li> 
-                        <li><a > <div class="circle gray"></div> Sweet Alerts   </a></li> 
-                        <li><a > <div class="circle gray"></div> Tabs  </a></li> 
-                        <li><a > <div class="circle gray"></div> Toasts  </a></li> 
-                        <li><a > <div class="circle gray"></div> Tooltips  </a></li> 
-                        <li><a > <div class="circle gray"></div> Typography  </a></li> 
-                        <li><a > <div class="circle gray"></div> Video  </a></li> 
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Alerts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Accordian
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Avatar
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Badges
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Border
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Buttons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Button Group
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Breadcrumb
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Card
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Carousel
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Colors
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Dropdowns
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Grid
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Images
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Lightbox
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Media
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> MOdals
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Notification
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Offcanvas
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Pagination
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Popovers
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Progress
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Placeholder
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Range Slider
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Spinner
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Sweet Alerts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Tabs
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Toasts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Tooltips
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Typography
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Video
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Advanced UI  ========== -->
@@ -855,17 +1145,37 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Ribbon </a></li>
-                        <li><a > <div class="circle gray"></div> Clipboard </a></li>
-                        <li><a > <div class="circle gray"></div> Drag & Drop </a></li>
-                        <li><a > <div class="circle gray"></div> Range Slider </a></li>
-                        <li><a > <div class="circle gray"></div> Rating  </a></li>
-                        <li><a > <div class="circle gray"></div> Text Editor  </a></li>
-                        <li><a > <div class="circle gray"></div> Counter  </a></li>
-                        <li><a > <div class="circle gray"></div> Scrollbar  </a></li>
-                        <li><a > <div class="circle gray"></div> Sticky Note  </a></li>
-                        <li><a > <div class="circle gray"></div> Timeline   </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Ribbon
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Clipboard
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Drag & Drop
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Range Slider
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Rating
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Text Editor
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Counter
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Scrollbar
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Sticky Note
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Timeline
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Chart  ========== -->
@@ -880,13 +1190,25 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Apex Charts </a></li>
-                        <li><a > <div class="circle gray"></div> Chart Js </a></li>
-                        <li><a > <div class="circle gray"></div> Morris Charts </a></li>
-                        <li><a > <div class="circle gray"></div> Flot Charts </a></li>
-                        <li><a > <div class="circle gray"></div> Peity Charts </a></li>
-                        <li><a > <div class="circle gray"></div> C3 Charts </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Apex Charts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Chart Js
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Morris Charts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Flot Charts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Peity Charts
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> C3 Charts
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Icons  ========== -->
@@ -901,17 +1223,37 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Fontawesome Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Feather Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Iconic Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Material Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Pe7 Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Simpleline Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Themify Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Weather Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Typicon Icons </a></li>
-                        <li><a > <div class="circle gray"></div> Flag Icons </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Fontawesome Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Feather Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Iconic Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Material Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Pe7 Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Simpleline Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Themify Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Weather Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Typicon Icons
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Flag Icons
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Forms  ========== -->
@@ -926,17 +1268,37 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Basic Inputs </a></li>
-                        <li><a > <div class="circle gray"></div> Input Groups </a></li>
-                        <li><a > <div class="circle gray"></div> Horizontal Form </a></li>
-                        <li><a > <div class="circle gray"></div> Vertical Form </a></li>
-                        <li><a > <div class="circle gray"></div> Form Mask </a></li>
-                        <li><a > <div class="circle gray"></div> Form Validation </a></li>
-                        <li><a > <div class="circle gray"></div> Form Select2 </a></li>
-                        <li><a > <div class="circle gray"></div> File Upload </a></li>
-                        <li><a > <div class="circle gray"></div> Horizontal Timeline </a></li>
-                        <li><a > <div class="circle gray"></div> Form Wizard </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Basic Inputs
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Input Groups
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Horizontal Form
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Vertical Form
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Form Mask
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Form Validation
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Form Select2
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> File Upload
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Horizontal Timeline
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Form Wizard
+                            </a></li>
+                    </ul>
                 </li>
 
                 <!-- ======== Tables  ========== -->
@@ -951,12 +1313,18 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Basic Tables </a></li>
-                        <li><a > <div class="circle gray"></div> Data Table </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Basic Tables
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Data Table
+                            </a></li>
+                    </ul>
                 </li>
 
-                <li class="menu-title"><div class="title-circle"></div> Extras  </li>
+                <li class="menu-title">
+                    <div class="title-circle"></div> Extras
+                </li>
 
                 <!-- ======== Documentation  ========== -->
 
@@ -982,7 +1350,7 @@
                     </div>
                 </li>
 
-                
+
                 <!-- ======== Multi Level  ========== -->
 
                 <li class="menu">
@@ -990,14 +1358,18 @@
                         <input type="radio" id="my-dropdown" value="" name="my-checkbox">
                         <div class="flex">
                             <span class="material-symbols-outlined arrow_up"> arrow_top_left </span>
-                             <p class="title"> Multi Level </p>
+                            <p class="title"> Multi Level </p>
                         </div>
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a > <div class="circle gray"></div> Level 1 </a></li>
-                        <li><a > <div class="circle gray"></div> Level 1 </a></li>
-                    </ul> 
+                        <li><a>
+                                <div class="circle gray"></div> Level 1
+                            </a></li>
+                        <li><a>
+                                <div class="circle gray"></div> Level 1
+                            </a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -1007,12 +1379,537 @@
     <div class="main">
         <div class="title-section">
             <div>
-                <h3>Welcome !</h1>
-                    <p class="subheading">leader Dashboard </p>
+                <h3> Deals Dashboard</h3>
+            </div>
+            <div class="right-section">
+                <div class="common-btn">
+                    <span class="material-symbols-outlined"> refresh </span>
+                </div>
+                <div class="common-btn full-btn">
+                    <span class="material-symbols-outlined"  onclick="openFullscreen(); exitFullScreen()"> open_with </span>
+                </div>
+                <!-- ==== export modal ==== -->
+                <div class="Modal">
+                    <div class="modal-btn">
+                       <button id="myBtn"> <span class="material-symbols-outlined"> exit_to_app </span> Export</button>
+                    </div>
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Export</h4>
+                                <span class="close">X</span>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <h5>Export</h5>
+                                    <div class="status-btn">
+                                        <div class="status">
+                                            <div class="circle">
+                                                <input type="radio">
+                                                <span></span>
+                                            </div>
+                                            <p>Person</p>
+                                        </div>
+                                        <div class="status">
+                                            <div class="circle">
+                                                <input type="radio">
+                                                <span></span>
+                                            </div>
+                                            <p>Organization</p>
+                                        </div>
+                                    </div>
+                                    <h6>Filters</h6>
+                                    <div class="input">
+                                        <label for="">Fields<span>*</span></label>
+                                        <select class="js-example-basic" name="states" >
+                                            <option value="AL"> Contact </option>
+                                            <option value="WY"> Company </option>
+                                          </select>
+                                    </div>
+                                    <div class="date-input">
+                                        <div class="input">
+                                            <label for="">From Date<span>*</span></label>
+                                            <input id="datepicker" type="date" class="datepicker-input">
+                                        </div>
+                                        <div class="input">
+                                            <label for="">To Date<span>*</span></label>
+                                            <!-- <input id="datepicker2" type="date" class="datepicker-input"> -->
+                                        </div>
+                                    </div>
+                                    <div class="bottom-buttons">
+                                        <button class="reset-btn">Reset</button>
+                                        <button class="export-btn"> Export Now </button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                      
+                      </div>
+                </div>
+                <div class="common-btn calendar_month">
+                    <span class="material-symbols-outlined"> calendar_month </span>
+                    <input type="text" class="calender" value="04/13/2024 - 04/19/2024">
+                    <input type="radio" class="check">
+                    <div class="calender-dropdown">
+                        <ul>
+                            <li>Today</li>
+                            <li>Yesterday</li>
+                            <li class="active">Last 7 Days </li>
+                            <li>Last 30 Days </li>
+                            <li>This Month </li>
+                            <li>Last Month </li>
+                            <li>Custom Range </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="common-btn calendar_month">
+                    <span class="material-symbols-outlined"> deployed_code_account </span>
+                    <select class="dashboard-dropdown" name="states" >
+                        <option value="WY">Leads Dashboard</option>
+                        <option value="AL">Deals Dashboard</option>
+                      </select>
+                </div>
             </div>
         </div>
 
+        <div class="deals-cards">
+            <div class="deals-card">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4>Deals By Stage </h4>
+                        <div class="dropdown">
+                            <div class="marketing-menu">
+                                <a class="menu" href="">
+                                    <p>Marketing Pipeline </p> <span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown day2">
+                                    <li> Marketing Pipeline</li>
+                                    <li> Sales Pipeline </li>
+                                    <li> Email </li>
+                                    <li> Chats </li>
+                                    <li> Operational </li>
+                                </ul>
+                            </div>
+                            <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    <p>Last 3 month </p><span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <canvas id="total-deal"></canvas>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deals-card">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4>Recently Created Contacts<a href=""> <span class="material-symbols-outlined"> link
+                                </span></a></h4>
+                        <div class="dropdown">
+                           <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    Last 3 month <span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="first">Deal Name</th>
+                                    <th> Company Name </th>
+                                    <th> 	Deal Value </th>
+                                    <th class="last"> Lead Status </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="deals-details.html">Collins</a></td>
+                                    <td>Conversation</td>
+                                    <td> +1 989757485 </td>
+                                    <!-- <td><span class="warning">Open</span></td> -->
+                                    <td><span class="danger">Lost</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Konopelski</a></td>
+                                    <td>Pipeline</td>
+                                    <td>$03,12,500</td>
+                                    <td><span class="danger">Lost</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Adams</a></td>
+                                    <td>Won</td>
+                                    <td>$04,14,800</td>
+                                    <td><span class="success">Not Contacted</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Schumm</a></td>
+                                    <td>Lost</td>
+                                    <td>$9,14,400</td>
+                                    <td><span class="danger"> Closed </span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">Wisozk</a></td>
+                                    <td>Follow Up</td>
+                                    <td>$11,14,400</td>
+                                    <td><span class="warning"> Contacted </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="deals-cards">
+            <div class="deals-card">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4>Lost Deals Stage </h4>
+                        <div class="dropdown">
+                            <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    <p>Marketing Pipeline </p> <span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown day2">
+                                    <li> Marketing Pipeline</li>
+                                    <li> Sales Pipeline </li>
+                                    <li> Email </li>
+                                    <li> Chats </li>
+                                    <li> Operational </li>
+                                </ul>
+                            </div>
+                            <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    <p>Last 3 month </p><span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- ==== lost deals ====  -->
+                        <div>
+                            <canvas id="lost-deal"></canvas>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deals-card">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4>Won Deals Stage </h4>
+                        <div class="dropdown">
+                            <div class="marketing-menu">
+                                <a class="menu" href="">
+                                    <p>Marketing Pipeline </p> <span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown day2">
+                                    <li> Marketing Pipeline</li>
+                                    <li> Sales Pipeline </li>
+                                    <li> Email </li>
+                                    <li> Chats </li>
+                                    <li> Operational </li>
+                                </ul>
+                            </div>
+                            <div class="marketing-menu">
+                                <a class="menu" href="">
+                                    <p>Last 3 month </p><span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- ========= won Deals ============ -->
+                        <div>
+                            <canvas id="won-deal"></canvas>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <div class="deals-cards ">
+            <div class="deals-card deal-by-year">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4>Deals by Year </h4>
+                        <div class="dropdown">
+                            <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    <p>Last 3 month </p><span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- ==== lost deals ====  -->
+                        <div>
+                            <canvas id="lead-line"></canvas>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="deals-cards">
+            <div class="deals-card">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4>Leads By Stage </h4>
+                        <div class="dropdown">
+                            <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    <p>Marketing Pipeline </p> <span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown day2">
+                                    <li> Marketing Pipeline</li>
+                                    <li> Sales Pipeline </li>
+                                    <li> Email </li>
+                                    <li> Chats </li>
+                                    <li> Operational </li>
+                                </ul>
+                            </div>
+                            <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    <p>Last 3 month </p><span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- ==== lost deals ====  -->
+                        <div>
+                            <canvas id="lead-pie"></canvas>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="deals-card">
+                <div class="card">
+                    <div class="deal-header">
+                        <h4> Recently Created Leads </h4>
+                        <div class="dropdown">
+                           <div class="marketing-menu">
+                                <a  class="menu" href="">
+                                    Last 3 month <span class="material-symbols-outlined down-icon">expand_more</span>
+                                    <input type="checkbox">
+                                </a>
+                                <ul class="day-dropdown">
+                                    <li> Last 3 month</li>
+                                    <li> Last 6 month </li>
+                                    <li> Last 12 month </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="first">Deal Name</th>
+                                    <th class="name"> Company Name </th>
+                                    <th>Deal Value</th>
+                                    <th class="last"> Lead status </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="first"> <a href="deals-details.html">Collins</a></td>
+                                    <td class="name">
+                                        <div class="company-logo">
+                                            <a href="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                                                    <path d="M0.233398 15.7098L7.73041 12.373L12.0456 14.8756L12.9173 23.0857L7.59967 23.0417L8.38422 17.3342L7.46889 16.8073L2.97938 20.3199L0.233398 15.7098Z" fill="#B4C0D3"/>
+                                                    <path d="M12.5254 14.5245L19.1508 19.3978L21.766 14.7001L16.4481 12.5488V11.4951L21.766 9.29988L19.1508 4.646L12.5254 9.51941V14.5245Z" fill="#00D3AB"/>
+                                                    <path d="M12.0456 9.12419L12.9173 0.914062L7.59967 1.00185L8.38422 6.70945L7.46889 7.2363L2.9358 3.72393L0.233398 8.28999L7.73041 11.6267L12.0456 9.12419Z" fill="#4876EF"/>
+                                                    </svg>
+                                            </a>
+                                        </div>
+                                        <p>
+                                            NovaWave LLC
+                                            Newyork, USA</p>
+                                    </td>
+                                    <td>+1 989757485</td>
+                                    <td><span class="warning">Open</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="first"><a href="">BlueSky Industries</a></td>
+                                    <td class="name">
+                                        <div class="company-logo">
+                                            <a href="">
+
+                                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6205 0.787256C10.2927 0.597607 9.88845 0.597607 9.56062 0.787256C7.23207 2.13425 5.66155 4.6545 5.66155 7.54282C5.66155 7.95447 5.69347 8.35865 5.75492 8.75303C4.15196 8.20865 2.41633 8.40676 0.998694 9.22365C0.670541 9.41272 0.468428 9.76277 0.46875 10.1415C0.470429 12.1395 1.50838 14.0869 3.36729 15.1601C4.27924 15.6867 5.27462 15.9369 6.25646 15.9374C6.10708 16.3605 6.02581 16.8161 6.02581 17.2905C6.02581 19.5353 7.8456 21.355 10.0904 21.355C12.3353 21.355 14.155 19.5353 14.155 17.2905C14.155 16.8149 14.0733 16.3587 13.9234 15.9346C14.8467 15.9054 15.7767 15.6548 16.633 15.1601C18.492 14.0869 19.5298 12.1396 19.5314 10.1416C19.5319 9.76286 19.3298 9.41281 19.0016 9.22372C17.6398 8.43902 15.9845 8.2253 14.4355 8.69223C14.4909 8.31714 14.5195 7.93334 14.5195 7.54282C14.5195 4.6545 12.9491 2.13425 10.6205 0.787256ZM7.7782 7.54282C7.7782 5.66722 8.68636 4.00274 10.0905 2.96668C11.4948 4.00274 12.4029 5.66722 12.4029 7.54282C12.4029 9.4184 11.4948 11.0829 10.0905 12.1189C8.68636 11.0829 7.7782 9.4184 7.7782 7.54282ZM14.2644 11.0577C15.2418 10.4934 16.3711 10.4278 17.3576 10.7848C17.1737 11.8177 16.5521 12.7628 15.5748 13.3271C14.5974 13.8914 13.4681 13.957 12.4816 13.6001C12.6655 12.5671 13.2871 11.622 14.2644 11.0577ZM2.64273 10.7847C3.62921 10.4277 4.7585 10.4933 5.73585 11.0576C6.71323 11.6219 7.33472 12.5671 7.51876 13.5998C6.53225 13.957 5.40296 13.8914 4.42561 13.3271C3.44826 12.7628 2.82674 11.8176 2.64273 10.7847ZM8.14246 17.2905C8.14246 16.2147 9.01458 15.3425 10.0904 15.3425C11.1662 15.3425 12.0384 16.2147 12.0384 17.2905C12.0384 18.3662 11.1662 19.2385 10.0904 19.2385C9.01458 19.2385 8.14246 18.3662 8.14246 17.2905Z" fill="#22B24B"/>
+                                                    </svg>
+                                                    
+                                            </a>
+                                        </div>
+                                        <p> BlueSky Industries Winchester, KY</p>
+                                    </td>
+                                    <td>	+1 989757485 </td>
+                                    <td><span class="danger">Lost</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="first"><a href="">Adams</a></td>
+                                    <td class="name">
+                                        <div class="company-logo">
+                                            <a href="">
+
+                                                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.2232 12.198C20.9492 10.1075 25.6634 11.4018 27.7996 15.1019L24.5847 16.9579C20.8418 19.1188 16.0545 17.8095 13.9326 14.0442L17.2232 12.198Z" fill="#FF6665"/>
+                                                    <path d="M15.8595 10.7327C17.9879 7.04606 22.7022 5.7829 26.3888 7.9114L24.4619 11.2491C22.3332 14.9357 17.6192 16.199 13.9326 14.0703L15.8595 10.7327Z" fill="#FF6665" fill-opacity="0.8"/>
+                                                    <path d="M13.7666 10.3752C13.7666 5.90396 17.3913 2.2793 21.8624 2.2793V6.05737C21.8624 10.5285 18.2377 14.1532 13.7666 14.1532V10.3752Z" fill="#FF6665" fill-opacity="0.8"/>
+                                                    <path d="M11.8562 10.5293C9.72774 6.84265 10.9908 2.1285 14.6776 0L16.6045 3.33766C18.7331 7.02434 17.4699 11.7385 13.7833 13.8669L11.8562 10.5293Z" fill="#FF6665" fill-opacity="0.8"/>
+                                                    <path d="M13.766 9.83545C13.766 5.66232 10.3831 2.2793 6.20996 2.2793V6.59709C6.20996 10.7702 9.59296 14.1532 13.766 14.1532V9.83545Z" fill="#FF6665" fill-opacity="0.8"/>
+                                                    <path d="M12.1397 10.7327C10.0113 7.04606 5.29703 5.7829 1.61035 7.9114L3.53735 11.2491C5.66585 14.9357 10.38 16.199 14.0666 14.0703L12.1397 10.7327Z" fill="#FF6665" fill-opacity="0.8"/>
+                                                    <path d="M10.7764 12.198C7.05054 10.1075 2.33633 11.4018 0.200195 15.1019L3.41494 16.9579C7.15799 19.1188 11.9453 17.8095 14.0672 14.0442L10.7764 12.198Z" fill="#FF6665"/>
+                                                    </svg>
+                                                    
+                                            </a>
+                                        </div>
+                                        <p> SilverHawk Jametown, NY</p>
+                                    </td>
+                                    <td>+1 546555455</td>
+                                    <td><span class="success">Won</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="first"><a href="">Schumm</a></td>
+                                    <td class="name">
+                                        <div class="company-logo">
+                                            <a href="">
+
+                                                <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M27.3386 7.07138C27.9041 7.63697 27.9041 8.55396 27.3386 9.11954L17.0629 19.3953C16.4974 19.9608 15.5804 19.9608 15.0148 19.3953L8.54822 12.9288C7.98262 12.3632 7.98262 11.4462 8.54822 10.8806L18.824 0.60486C19.3896 0.0392653 20.3065 0.0392653 20.8721 0.60486L27.3386 7.07138Z" fill="#4A6DFF"/>
+                                                    <path d="M19.4528 7.07138C20.0184 7.63697 20.0184 8.55396 19.4528 9.11954L9.17715 19.3953C8.61158 19.9608 7.69459 19.9608 7.129 19.3953L0.662477 12.9288C0.0968825 12.3632 0.0968825 11.4462 0.662477 10.8806L10.9382 0.60486C11.5038 0.0392653 12.4208 0.0392653 12.9864 0.60486L19.4528 7.07138Z" fill="#2EB9FF"/>
+                                                    </svg>
+                                                    
+                                            </a>
+                                        </div>
+                                        <p> SummitPeak Compton, RI</p>
+                                    </td>
+                                    <td>47%</td>
+                                    <td><span class="danger">Lost</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==== jQuery =====  -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+              
+                var elem = document.querySelector(".body");
+                function openFullscreen() {
+                if (elem.requestFullscreen) {
+                        elem.requestFullscreen();
+                    } else if (elem.webkitRequestFullscreen) { /* Safari */
+                        elem.webkitRequestFullscreen();
+                    } else if (elem.msRequestFullscreen) { /* IE11 */
+                        elem.msRequestFullscreen();
+                    }
+                }
+
+                function exitFullScreen(){
+
+                if(document.exitFullscreen){
+                    document.exitFullscreen();
+                }
+                else if(document.mozCancelFullScreen){
+                    document.mozCancelFullScreen();
+                }
+                else if(document.webkitExitFullscreen){
+                    document.webkitExitFullscreen();
+                }
+                else if(document.msExitFullscreen){
+                    document.msExitFullscreen();
+                }
+
+                }
+
+                var modal = document.getElementById("myModal");
+
+                var btn = document.getElementById("myBtn");
+
+                var close = document.querySelector('.close')
+                let nav = document.querySelector('.container');
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                modal.style.display = "block";
+                nav.classList.add('export-nav');
+                }
+
+                close.onclick = function() {
+                modal.style.display = "none";
+                nav.classList.add('export-nav');
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    nav.classList.remove('export-nav');
+                }
+                }
+
+        </script>
 
     </div>
+    </div>
 </body>
+
 </html>

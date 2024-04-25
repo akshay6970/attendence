@@ -27,6 +27,16 @@
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- ======= jQuery ========== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ========  Select2 Library  ============= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ======  Owl Carousel JS =========  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
 </head>
 <body>
     <!-- navbar section -->
@@ -70,9 +80,7 @@
                       </ul>
                 </li>
     
-                <div class="line">
-                    
-                </div>
+                <div class="line"></div>
                 <div class="notification">
                     <div class="notification-icon">
                         <input type="radio" class="radio-btn">
@@ -301,7 +309,7 @@
                         <span class="material-symbols-outlined down-icon">chevron_right</span>
                     </div>
                     <ul class="dropdown-content">
-                        <li><a href="#"> <div class="circle"></div> Chat</a></li>
+                        <li><a href="chat.html"> <div class="circle"></div> Chat</a></li>
                         <li><a href="#"> <div class="circle"></div> Calls </a></li>
                         <li><a href="#"> <div class="circle"></div> Calender </a></li>
                         <li><a href="#"> <div class="circle"></div> Contacts </a></li>
@@ -1450,24 +1458,20 @@
                                     </td>
                                     <td> barrycuda@example.com </td>
                                     <td class="dropdown">
-                                        <a class="status" href="#status-dropdown">
-                                            <input type="checkbox">
-                                            <span class="material-symbols-outlined green"> adjust </span>
-                                            <span>Active</span>
-                                            <span class="material-symbols-outlined">
-                                                arrow_drop_down
-                                                </span>
-                                        </a>
-                                        <div class="status-dropdown" id="status-dropdown">
-                                            <a href="#" class="active"> 
-                                                <span class="material-symbols-outlined green"> adjust </span>
-                                                <span>Active</span>
-                                            </a>
-                                            <a href="#" class="Inactive"> 
-                                                <span class="material-symbols-outlined red"> adjust </span>
+                                        <select id="act-inact" class="act-inact" name="states" >
+                                            <option >
+                                                <a href="#" class="active"> 
+                                                    <!-- <span class="material-symbols-outlined green"> adjust </span> -->
+                                                    <img style="width: 20px; height: 20px; border-radius: 50%;" 
+                                                        src="https://images.pexels.com/photos/20147091/pexels-photo-20147091/free-photo-of-a-silhouette-of-a-man-playing-guitar-in-front-of-the-moon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                    alt="">
+                                                    <span>Active</span>
+                                                </a>
+                                            </option>
+                                            <option >
                                                 <span>Inactive</span>
-                                            </a>
-                                        </div>
+                                            </option>
+                                        </select>
                                     </td>
                                     <td>
                                         <input type="checkbox">

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let listName = document.querySelectorAll('.title')
 
     toggle.addEventListener("click", function () {
-        console.log('you clicked');
+        
         sideContainer.classList.toggle("active");
         main.classList.toggle("active");
         title.forEach(function (item) {
@@ -14,15 +14,53 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // date picker liberary
-    $('.js-example-basic-single').select2();
-
-    $(function() {
-        $("#datepicker").datepicker({
-            dateFormat: 'yy-mm-dd',
-            minDate: 0 // minimum selectable date is today
-        });
+    // 
+    $(document).ready(function() {
+        $('.dashboard-dropdown').select2();
+        $('.js-example-basic').select2();
+        $('.js-active').select2();
+        $('.js-attendance').select2();
+        $('.js-attendance2').select2();
     });
+    $(document).ready(function() {
+        $('.act-inact').select2();
+    });
+    $('.js-attendance').select2({
+        closeOnSelect: false,
+        placeholder: 'Select an option'
+    });
+
+    function formatState (state) {
+        if (!state.id) {
+          return state.text;
+        }
+        var baseUrl = "/user/pages/images/flags";
+        var $state = $(
+          '<span><img src="' + "https://images.pexels.com/photos/20802886/pexels-photo-20802886/free-photo-of-cicek.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+        );
+        return $state;
+      };
+      
+      $(".js-attendance").select2({
+        templateResult: formatState
+      });
+
+
+    // $("#act-inact").select2({
+        
+    //     placeholder: ' <span class="material-symbols-outlined green"> adjust </span>Branch name',
+    //     escapeMarkup : function(markup) {   
+    //       return markup;
+    //     }
+    //   });
+
+    // date picker liberary
+    // $('.datepicker-input').select2();
+
+    // jQuery(function($) {
+    //     $("#datepicker").datepicker();
+    // });
+    
 
 
     //  hover on side bar
@@ -96,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     let ctx = document.getElementById('myChart').getContext("2d");
 
-    let firstHalf = [2006, 2007, 2008, 2009, 2010, 2011, 2012]
+    let firstHalf = [2006, 2007, 2008, 2009, 2010, 2011, 2012];
     let secondHalf = [15, 25, 20, 10, 20]
 
     new Chart(ctx, {
@@ -159,7 +197,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let lineGraph = document.getElementById("myChart2").getContext("2d");
 
-
     new Chart(lineGraph, {
         type: 'line',
         data: {
@@ -205,6 +242,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     display: false
                 },
             },
+            // interaction: {
+            //     mode: 'x'
+            // },
             legend: {
                 display: true,
                 labels: {
@@ -389,4 +429,99 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+});
+//  ============ lead Page  ====================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const pie_data = document.getElementById('lead-pie').getContext("2d");
+
+    new Chart(pie_data, {
+        type: 'pie',
+        data: {
+            labels: ['Inpipeline', 'Follow Up', 'Schdule Service', 'Conversation'],
+            datasets: [{
+                labels: ['Inpipeline', 'Follow Up', 'Schdule Service', 'Conversation'],
+                data: [43, 55, 13, 43],
+                borderWidth: 2,
+                backgroundColor: ["rgb(0, 143, 251)","rgb(0, 227, 150)","rgb(254, 176, 25)","rgb(255, 69, 96)"],
+            }]
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: ["rgb(0, 143, 251)","rgb(0, 227, 150)","rgb(254, 176, 25)","rgb(255, 69, 96)"],
+                    bodyColor: "white",
+                    titleColor: "white",
+                    title: "hello",
+                    x: 10,
+                    y: 0,
+                    barThickness: 6,
+                },
+                legend: {
+                    display: false
+                },
+            },
+            events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
+            plugins: {
+              tooltip: {
+                // Tooltip will only receive click events
+                events: ['click']
+              }
+            },
+        
+        },
+    });
+
+    let lineGraph = document.querySelector("#lead-line").getContext("2d");
+    let firstHalf = ['jan', 'feb', 'mar','april', 'may', 'june', 'july', 'aug','sep','oct','nov','dec'];
+
+
+    new Chart(lineGraph, {
+        type: 'line',
+        data: {
+            labels: firstHalf,
+            datasets: [
+                {
+                    label: "Total Sales",
+                    barPercentage: 0.5,
+                    barThickness: 17,
+                    maxBarThickness: 1,
+                    minBarLength: 1,
+                    data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10,],
+                    backgroundColor: "rgb(255, 155, 68)",
+                }
+            ],
+        },
+        options: {
+            plugins: {
+                tooltip: {
+
+                    // Disable the on-canvas tooltip
+                    enabled: true,
+                    backgroundColor: "white",
+                    bodyColor: "rgb(255, 155, 68)",
+                    titleColor: "black",
+                    title: "hello",
+                    x: 10,
+                    y: 0,
+                    barThickness: 1,
+                    // caretX: 10,
+                },
+                legend: {
+                    display: false
+                },
+            },
+            // interaction: {
+            //     mode: 'x'
+            // },
+            legend: {
+                display: true,
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            }
+        },
+    });
 });
